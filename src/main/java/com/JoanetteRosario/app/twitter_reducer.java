@@ -10,13 +10,12 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context)
             throws IOException, InterruptedException {
-
         int sum = 0;
-       // String neKey = "";
+
         for (IntWritable value : values ){
-            sum++;
+            context.write(key, value);
         }
         //System.out.println("this be the sum whutup "+sum+"\n" );
-        context.write(key, new IntWritable(sum));
+
     }
 }
