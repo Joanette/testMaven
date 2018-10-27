@@ -11,6 +11,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 
 public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
@@ -24,24 +25,18 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         String[] tuple = line.split("\\n");
         String s = "";
         JSONParser parser = new JSONParser();
+        JSONObject json = null;
         try {
-            for (int i = 0; i < tuple.length; i++) {
-                JSONObject json = (JSONObject) parser.parse(tuple[i]);
-                String text = (String) json.get("text");
-                String words[]= text.split(" ");
-                int k = words.length;
-                int id = (Integer)json.get("id");
-                for(int j = 0; j<k; j++){
-                    if(words[i].contains("MAGA")){
-                        word.set("MAGA");
-                        context.write(new Text("MAGA"), new IntWritable(id));
-                    }
-                }
+            json = (JSONObject) parser.parse(tuple[1]);
+            String text = (String) json.get("text");
+            System.out.println(text);
+            if(text.contains("Flu")) {
+                context.write(new Text("MAGA"), new IntWritable((1)));
             }
-
-        } catch (Exception e) {
+        } catch (ParseException e) {
             e.printStackTrace();
         }
+
     }
 
 }
