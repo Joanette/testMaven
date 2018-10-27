@@ -13,10 +13,15 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
 
         int sum = 0;
         Iterator<IntWritable> valuesIt = values.iterator();
+       // while (valuesIt.hasNext()) {
+          //  sum = sum + valuesIt.next().get();
+        //}
+        String neKey = "";
         while (valuesIt.hasNext()) {
-            sum = sum + valuesIt.next().get();
+            neKey = key.toString() +"," + valuesIt.next().get();
+            sum = valuesIt.next().get();
         }
         System.out.println("this be the sum whutup "+sum+"\n" );
-        context.write(key, new IntWritable(sum));
+        context.write(new Text(neKey), new IntWritable(sum));
     }
 }

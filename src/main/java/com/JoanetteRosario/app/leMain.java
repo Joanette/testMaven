@@ -35,8 +35,8 @@ public class leMain extends Configured implements Tool{
         job.setJobName("WordCounter");
         args[0] = "/user/joanette_rosario/tweets/raw_tweet100k.json";
         args[1] = "/user/joanette_rosario/tweets/output.txt";
-        System.out.println("args[0] " + args[0]);
-        System.out.println("args[1]"+args[1]);
+        //System.out.println("args[0] " + args[0]);
+        //System.out.println("args[1]"+args[1]);
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
