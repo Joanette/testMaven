@@ -23,13 +23,6 @@ public class leMain extends Configured implements Tool{
     }
 
     public int run(String[] args) throws Exception {
-        // if (args.length != 2) {
-        // System.err.printf("Usage: %s [generic options] <input> <output>\n",
-        //  getClass().getSimpleName());
-        // ToolRunner.printGenericCommandUsage(System.err);
-        // return -1;
-        //}
-
         Job job = new org.apache.hadoop.mapreduce.Job();
         job.setJarByClass(leMain.class);
         job.setJobName("WordCounter");

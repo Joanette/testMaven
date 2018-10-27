@@ -12,16 +12,11 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
             throws IOException, InterruptedException {
 
         int sum = 0;
-        Iterator<IntWritable> valuesIt = values.iterator();
-       // while (valuesIt.hasNext()) {
-          //  sum = sum + valuesIt.next().get();
-        //}
-        String neKey = "";
-        while (valuesIt.hasNext()) {
-            neKey = key.toString() +"," + valuesIt.next().get();
-            sum = valuesIt.next().get();
+       // String neKey = "";
+        for (IntWritable value : values ){
+            sum++;
         }
-        System.out.println("this be the sum whutup "+sum+"\n" );
-        context.write(new Text(neKey), new IntWritable(sum));
+        //System.out.println("this be the sum whutup "+sum+"\n" );
+        context.write(key, new IntWritable(sum));
     }
 }
