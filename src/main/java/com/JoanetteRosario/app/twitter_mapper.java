@@ -33,9 +33,9 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                 int k = words.length;
                 int id = (Integer)json.get("id");
                 for(int j = 0; j<k; j++){
-                    if(words[i].contains("MAGA")){
+                    if(words[i].contains("FLU")){
                         word.set("MAGA");
-                        context.write(new Text("MAGA"), new IntWritable(id));
+                        context.write(new Text("MAGA"), new IntWritable(1));
                     }
                 }
             }
