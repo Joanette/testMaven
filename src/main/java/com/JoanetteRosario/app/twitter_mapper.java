@@ -14,13 +14,16 @@ import org.json.simple.parser.JSONParser;
 
 
 public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
+
+    private final static IntWritable one = new IntWritable(1);
+    private Text word = new Text();
+
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         String line = value.toString();
         String[] tuple = line.split("\\n");
         String s = "";
         JSONParser parser = new JSONParser();
-
         try {
             for (int i = 0; i < tuple.length; i++) {
                 JSONObject json = (JSONObject) parser.parse(tuple[i]);
@@ -30,11 +33,12 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                 int id = (Integer)json.get("id");
                 for(int j = 0; j<k; j++){
                     if(words[i].contains("MAGA")){
+                        word.set("MAGA");
                         context.write(new Text("MAGA"), new IntWritable(id));
                     }
-
                 }
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -6,14 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_reducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_reducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/leMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/leMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/twitter_mapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/twitter_mapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/twitter_reducer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/JoanetteRosario/app/twitter_reducer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/my-app-1.0-SNAPSHOT-shaded.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/myapp-1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/myapp-1-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/myapp-1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/myapp-1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-myapp-1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-myapp-1.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,13 +47,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3065" />
+          <entry key="java" value="3109" />
           <entry key="xml" value="39" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3065" />
+          <entry key="JAVA" value="3109" />
           <entry key="XML" value="39" />
         </counts>
       </usages-collector>
@@ -90,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="48" column="69" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
+            <state relative-caret-position="258">
+              <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            <state relative-caret-position="-85">
+              <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_reducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+            <state relative-caret-position="233">
+              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/App.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_reducer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java" />
       </list>
     </option>
   </component>
@@ -170,8 +162,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="676" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -227,7 +219,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540658393089" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540659837546" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -274,7 +266,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4987775" weight="0.277865" />
       <window_info id="Structure" order="1" sideWeight="0.5012225" side_tool="true" weight="0.13615733" />
@@ -285,7 +278,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5012225" side_tool="true" weight="0.13615733" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3442623" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34941763" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -301,7 +294,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.6844584" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -340,20 +333,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="48" column="69" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_reducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="233">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -362,8 +345,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/twitter_mapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        <state relative-caret-position="-85">
+          <caret line="28" column="31" lean-forward="true" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/JoanetteRosario/app/leMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
