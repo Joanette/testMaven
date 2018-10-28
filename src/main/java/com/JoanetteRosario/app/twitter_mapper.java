@@ -33,7 +33,7 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                 System.out.println(text);
                 String words[] = text.split(" ");
                 int k = words.length;
-                int id = (Integer) json.get("id");
+                Long id = (Long) json.get("id");
                 for (int j = 0; j < k; j++) {
                     if (words[i].contains("Dictator")) {
                         context.write(new Text("MAGA"), new IntWritable(1));
