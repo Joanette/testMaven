@@ -21,8 +21,8 @@ public class leMain{
         Path output=new Path("/user/joanette_rosario/tweets/output.txt");
         Job j=new Job();
         j.setJarByClass(leMain.class);
-        j.setMapperClass(twitter_mapper.class);
-        j.setReducerClass(twitter_reducer.class);
+        j.setMapperClass(com.JoanetteRosario.app.twitter_mapper.class);
+        j.setReducerClass(com.JoanetteRosario.app.twitter_reducer.class);
         j.setOutputKeyClass(Text.class);
         j.setOutputValueClass(IntWritable.class);
         FileInputFormat.addInputPath(j, input);

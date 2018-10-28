@@ -16,5 +16,6 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
             sum += value.get();
         }
         context.write(key, new IntWritable(sum));
+
     }
 }
