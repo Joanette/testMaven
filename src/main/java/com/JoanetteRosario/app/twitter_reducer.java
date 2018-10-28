@@ -24,26 +24,39 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
         changeCollection.append("Change, ");
 
         String ids[] = keyToSplit.split(",");
-        if(keyToSplit.contains("MAGA")){
-            magaCollection.append(ids[1]);
-        }
-        if(keyToSplit.contains("Dictator")){
-            dicatatorCollection.append(ids[1]);
-        }
-        if(keyToSplit.contains("Drain")){
-            drainCollection.append(ids[1]);
-        }
-        if(keyToSplit.contains("Swamp")){
-            swampCollection.append(ids[1]);
-        }
-        if(keyToSplit.contains("Change")){
-            changeCollection.append(ids[1]);
+        int k = ids.length;
+        for(int i = 1 ; i<k; i++) {
+            if (keyToSplit.contains("MAGA")) {
+                magaCollection.append(ids[1]);
+            }
+            if (keyToSplit.contains("Dictator")) {
+                dicatatorCollection.append(ids[1]);
+            }
+            if (keyToSplit.contains("Drain")) {
+                drainCollection.append(ids[1]);
+            }
+            if (keyToSplit.contains("Swamp")) {
+                swampCollection.append(ids[1]);
+            }
+            if (keyToSplit.contains("Change")) {
+                changeCollection.append(ids[1]);
+            }
         }
 
-        context.write(new Text(magaCollection.toString()), new IntWritable(sum));
-        context.write(new Text(dicatatorCollection.toString()), new IntWritable(sum));
-        context.write(new Text(drainCollection.toString()), new IntWritable(sum));
-        context.write(new Text(swampCollection.toString()), new IntWritable(sum));
-        context.write(new Text(changeCollection.toString()), new IntWritable(sum));
+        if(keyToSplit.contains("MAGA")) {
+            context.write(new Text(magaCollection.toString()), new IntWritable(sum));
+        }
+        if(keyToSplit.contains("Dictator")) {
+            context.write(new Text(dicatatorCollection.toString()), new IntWritable(sum));
+        }
+        if(keyToSplit.contains("Drain")) {
+            context.write(new Text(drainCollection.toString()), new IntWritable(sum));
+        }
+        if (keyToSplit.contains("Swamp")) {
+            context.write(new Text(swampCollection.toString()), new IntWritable(sum));
+        }
+        if(keyToSplit.contains("Change")) {
+            context.write(new Text(changeCollection.toString()), new IntWritable(sum));
+        }
     }
 }
