@@ -18,19 +18,34 @@ public class main {
         String[] tuple = str.split("\\n");
         JSONParser parser = new JSONParser();
         JSONObject json;
+        StringBuilder magaCollection = new StringBuilder();
+        magaCollection.append("MAGA, ");
+        StringBuilder dicatatorCollection = new StringBuilder();
+        dicatatorCollection.append("Dictator, ");
+        StringBuilder drainCollection = new StringBuilder();
+        drainCollection.append("Drain, ");
+        StringBuilder swampCollection = new StringBuilder();
+        swampCollection.append("Swamp, ");
+        StringBuilder changeCollection = new StringBuilder();
+        changeCollection.append("Change, ");
+
         int k = tuple.length;
         for(int j = 0; j<k; j++){
             json = (JSONObject) parser.parse(tuple[j]);
             String text = (String) json.get("text");
+            Long id = (Long) json.get("id");
             //System.out.println(text);
-            if(text.contains("Flu")){
+            if(text.contains("MAGA")){
                 System.out.println("MAGA");
+                magaCollection.append(" "+id+",");
             }
             if(text.contains("birds")){
-                System.out.println("hereee");
+               // System.out.println("hereee");
+                swampCollection.append(" "+id+",");
             }
         }
-
+        System.out.println(swampCollection.toString());
+        System.out.println(magaCollection.toString());
 
     }
 }

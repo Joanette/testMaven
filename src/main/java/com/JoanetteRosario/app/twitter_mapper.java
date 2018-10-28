@@ -26,7 +26,6 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         JSONParser parser = new JSONParser();
         JSONObject json;
         String text = "";
-
         StringBuilder magaCollection = new StringBuilder();
         magaCollection.append("MAGA, ");
         StringBuilder dicatatorCollection = new StringBuilder();
@@ -37,7 +36,6 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         swampCollection.append("Swamp, ");
         StringBuilder changeCollection = new StringBuilder();
         changeCollection.append("Change, ");
-       // context.write(new Text("boo"), new IntWritable(1));
         for (int i = 0; i < tuple.length; i++) {
             try {
                 json = (JSONObject) parser.parse(tuple[i]);
