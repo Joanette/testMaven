@@ -11,11 +11,11 @@ public class twitter_reducer  extends Reducer<Text, IntWritable, Text, IntWritab
     protected void reduce(Text key, Iterable<IntWritable> values, Context context)
             throws IOException, InterruptedException {
 
-//        int sum = 0;
-//        Iterator<IntWritable> valuesIt = values.iterator();
-//        while (valuesIt.hasNext()){
-//            sum += valuesIt.next().get();
-//        }
-//        context.write(key, new IntWritable(sum));
+        int sum = 0;
+        Iterator<IntWritable> valuesIt = values.iterator();
+        while (valuesIt.hasNext()){
+            sum += valuesIt.next().get();
+        }
+        context.write(key, new IntWritable(sum));
     }
 }

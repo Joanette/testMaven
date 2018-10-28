@@ -15,15 +15,13 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-public class leMain extends Configured implements Tool{
+public class leMain {
 
     public static void main(String[] args) throws Exception{
-        int exitCode = ToolRunner.run(new leMain(), args);
-        System.exit(exitCode);
-    }
+        //int exitCode = ToolRunner.run(new leMain(), args);
 
-    public int run(String[] args) throws Exception {
-        Job job = new org.apache.hadoop.mapreduce.Job();
+        //public int run(String[] args) throws Exception {
+        Job job = new Job();
         job.setJarByClass(leMain.class);
         job.setJobName("WordCounter");
         args[0] = "/user/joanette_rosario/tweets/raw_tweet100k.json";
@@ -35,12 +33,11 @@ public class leMain extends Configured implements Tool{
 
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
-        job.setOutputFormatClass(TextOutputFormat.class);
+        //job.setOutputFormatClass(TextOutputFormat.class);
         job.setMapperClass(twitter_mapper.class);
         job.setReducerClass(twitter_reducer.class);
 
-        int returnValue = job.waitForCompletion(true) ? 0:1;
         System.out.println("job.isSuccessful " + job.isSuccessful());
-        return returnValue;
+        System.exit(job.waitForCompletion(true)? 0 :1 );
     }
 }
