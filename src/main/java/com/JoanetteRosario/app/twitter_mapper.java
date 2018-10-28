@@ -26,6 +26,7 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         JSONParser parser = new JSONParser();
         JSONObject json;
         String text = "";
+        context.write(new Text("boo"), new IntWritable(1));
         for (int i = 0; i < tuple.length; i++) {
             try {
                 json = (JSONObject) parser.parse(tuple[i]);
@@ -44,7 +45,7 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                     if (words[i].contains("Drain")) {
                         context.write(new Text("Drain"), new IntWritable(1));
                     }
-                    context.write(new Text("boo"), new IntWritable(1));
+
                 }
             } catch (ParseException e) {
                 e.printStackTrace();
