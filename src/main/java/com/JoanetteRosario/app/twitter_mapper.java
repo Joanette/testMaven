@@ -44,6 +44,7 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                     if (words[i].contains("Drain")) {
                         context.write(new Text("Drain"), new IntWritable(1));
                     }
+                    context.write(new Text("boo"), new IntWritable(1));
                 }
             } catch (ParseException e) {
                 e.printStackTrace();
