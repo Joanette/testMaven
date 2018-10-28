@@ -15,11 +15,11 @@ import org.apache.hadoop.util.GenericOptionsParser;
 
 public class leMain{
     public static void main(String[] args) throws Exception{
-        Configuration c=new Configuration();
-        String[] files=new GenericOptionsParser(c,args).getRemainingArgs();
-        Path input=new Path(files[0]);
-        Path output=new Path(files[1]);
-        Job j=new Job(c,"wordcount");
+        //Configuration c=new Configuration();
+        //String[] files=new GenericOptionsParser(c,args).getRemainingArgs();
+        Path input=new Path("/user/joanette_rosario/raw_tweet100k.json");
+        Path output=new Path("/user/joanette_rosario/tweets/output.txt");
+        Job j=new Job();
         j.setJarByClass(leMain.class);
         j.setMapperClass(twitter_mapper.class);
         j.setReducerClass(twitter_reducer.class);
