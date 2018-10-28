@@ -26,32 +26,29 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         JSONParser parser = new JSONParser();
         JSONObject json;
         String text = "";
-        context.write(new Text("boo"), new IntWritable(1));
+       // context.write(new Text("boo"), new IntWritable(1));
         for (int i = 0; i < tuple.length; i++) {
             try {
                 json = (JSONObject) parser.parse(tuple[i]);
-                text = (String) json.get("text");
+                //text = (String) json.get("text");
                 System.out.println(text);
                 String words[] = text.split(" ");
                 int k = words.length;
                 Long id = (Long) json.get("id");
                 for (int j = 0; j < k; j++) {
-                    if (words[i].contains("Dictator")) {
+                    if (tuple[i].contains("Dictator") && tuple[i].contains("dictator")) {
                         context.write(new Text("MAGA"), new IntWritable(1));
                     }
-                    if (words[i].contains("Flu")) {
+                    if (tuple[i].contains("Flu") && tuple[i].contains("flu")) {
                         context.write(new Text("Impeach"), new IntWritable(1));
                     }
-                    if (words[i].contains("Drain")) {
+                    if (tuple[i].contains("Drain") && tuple[i].contains("drain")) {
                         context.write(new Text("Drain"), new IntWritable(1));
                     }
-
                 }
             } catch (ParseException e) {
                 e.printStackTrace();
             }
-
-
         }
     }
 }
