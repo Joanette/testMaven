@@ -2,8 +2,6 @@ package com.JoanetteRosario.app;
 
 import java.io.IOException;
 import java.util.StringTokenizer;
-
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
@@ -12,7 +10,6 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
-
 
 public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
@@ -43,7 +40,8 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                 //System.out.println(text);
                 String words[] = text.split(" ");
                 int k = words.length;
-                int id = (Integer) json.get("id");
+                long id2 = (Long) json.get("id");
+                int id = (int)(long)id2;
                 for (int j = 0; j < k; j++) {
                     if (tuple[i].contains("MAGA") && tuple[i].contains("maga")) {
                         magaCollection.append(""+id+", " );
