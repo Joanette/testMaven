@@ -23,16 +23,6 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
         JSONParser parser = new JSONParser();
         JSONObject json;
         String text = "";
-        StringBuilder magaCollection = new StringBuilder();
-        magaCollection.append("MAGA, ");
-        StringBuilder dicatatorCollection = new StringBuilder();
-        dicatatorCollection.append("Dictator, ");
-        StringBuilder drainCollection = new StringBuilder();
-        drainCollection.append("Drain, ");
-        StringBuilder swampCollection = new StringBuilder();
-        swampCollection.append("Swamp, ");
-        StringBuilder changeCollection = new StringBuilder();
-        changeCollection.append("Change, ");
         for (int i = 0; i < tuple.length; i++) {
             try {
                 json = (JSONObject) parser.parse(tuple[i]);
@@ -44,24 +34,20 @@ public class twitter_mapper extends Mapper<LongWritable, Text, Text, IntWritable
                 int id = (int)(long)id2;
                 for (int j = 0; j < k; j++) {
                     if (tuple[i].contains("MAGA") && tuple[i].contains("maga")) {
-                        magaCollection.append(""+id+", " );
-                        context.write(new Text("MAGA"), new IntWritable(0));
+                        context.write(new Text("MAGA"), new IntWritable(id));
                     }
                     if (tuple[i].contains("Dictator") && tuple[i].contains("dictator")) {
-                        dicatatorCollection.append(""+id+", " );
-                        context.write(new Text("Dictator"), new IntWritable(0));
+                        context.write(new Text("Dictator"), new IntWritable(id));
                     }
                     if (tuple[i].contains("Drain") && tuple[i].contains("drain")) {
-                        context.write(new Text("Drain"), new IntWritable(0));
-                        drainCollection.append(""+id+", ");
+                        context.write(new Text("Drain"), new IntWritable(id));
+
                     }
                     if (tuple[i].contains("Swamp") && tuple[i].contains("swamp")) {
-                       context.write(new Text("Swamp"), new IntWritable(0));
-                       swampCollection.append(""+id+", ");
+                       context.write(new Text("Swamp"), new IntWritable(id));
                     }
                     if (tuple[i].contains("Change") && tuple[i].contains("change")) {
-                        context.write(new Text("Swamp"), new IntWritable(0));
-                        changeCollection.append(""+id+", ");
+                        context.write(new Text("Swamp"), new IntWritable(id));
                     }
                 }
             } catch (ParseException e) {
